@@ -1,2 +1,2 @@
-output/
-croptxt
+output/*
+scripts/croptxt

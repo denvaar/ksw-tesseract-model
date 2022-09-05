@@ -43,8 +43,6 @@ int main(int argc, char** argv) {
 
     std::string input_file_name = input_path.substr(input_path.rfind("/") + 1);
 
-    cout << input_file_name << endl;
-
     Mat3b src = imread(input_path);
     std::string output_path = argv[2];
     int thresh = stoi(argv[3]);
@@ -130,7 +128,7 @@ int main(int argc, char** argv) {
     for (int i = 0; i < ycoords.size(); ++i) {
 
         if (ycoords[i] - prev_y > 10) {
-            imwrite(output_path + "/" + gen_random(20) + ".tiff",
+            imwrite(output_path + "/" + gen_random(25) + ".tiff",
                     ~result(Rect(
                             Point(0, prev_y),
                             Point(result.cols, ycoords[i]))));
