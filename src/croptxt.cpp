@@ -128,7 +128,9 @@ int main(int argc, char** argv) {
     for (int i = 0; i < ycoords.size(); ++i) {
 
         if (ycoords[i] - prev_y > 10) {
-            imwrite(output_path + "/" + gen_random(25) + ".tiff",
+            std::string basename = output_path + "/" + gen_random(25);
+
+            imwrite(basename + ".png",
                     ~result(Rect(
                             Point(0, prev_y),
                             Point(result.cols, ycoords[i]))));
