@@ -71,6 +71,7 @@ const htmlPage = `<!DOCTYPE html>
   </head>
   <body>
     <div>
+      <h2>{{imgId}}</h2>
       <canvas id="canvas" style="border:1px solid;"></canvas>
         <div style="margin-top:10px;">
           <div style="margin-top:10px;">
