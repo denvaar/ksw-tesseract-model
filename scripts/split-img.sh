@@ -6,7 +6,7 @@ THRESHHOLD=150
 
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)
 
-$SCRIPT_DIR/croptxt $INPUT_IMG_PATH $OUTPUT_DIR $THRESHHOLD
+$SCRIPT_DIR/croptxt $INPUT_IMG_PATH $OUTPUT_DIR $THRESHHOLD --debug
 
 # ls $OUTPUT_DIR/*.tiff | \
 # 	xargs -P4 -L1 -I{} convert {} -strip -type palette {}
