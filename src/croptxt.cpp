@@ -63,7 +63,7 @@ int main(int argc, char** argv) {
     RotatedRect box = minAreaRect(pts);
     // if (box.size.width < box.size.height)
     // {
-    //     // swap(box.size.width, box.size.height);
+    //     swap(box.size.width, box.size.height);
     //     box.angle += 90.f;
     // }
 
@@ -80,6 +80,7 @@ int main(int argc, char** argv) {
     // Rotate the image according to the found angle
     Mat1b rotated;
     Mat M = getRotationMatrix2D(box.center, box.angle - 90.f, 1.0);
+    // Mat M = getRotationMatrix2D(box.center, box.angle, 1.0);
     warpAffine(bin,
             rotated,
             M,
